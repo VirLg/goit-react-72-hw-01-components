@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import CreateItemMarkup from "../Item/Item"
-
+import css from './EventBoard.module.css'
 
 
 console.log(CreateItemMarkup);
@@ -9,9 +9,9 @@ console.log(CreateItemMarkup);
 export default function EventBoard({items}){
 return (
     
-    <ul>
+    <ul className={css.event__board}>
         {items.map(item=>(
-        <li className="item" key={item.id}>
+        <li className={css.item} key={item.id}>
             <CreateItemMarkup
             label={item.label}
             percentage={item.percentage}

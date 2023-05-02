@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import css from './SectionStat.module.css'
 // import PageTitle from './statistic/BaseTitle/BaseTitle'
 
 
 export default function SectionStat({children}){
     console.log(children);
-    return(<div>
+    return(<div className={css.section__stat}>
       
             {children}
         
