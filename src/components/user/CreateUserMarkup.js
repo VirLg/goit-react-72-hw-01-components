@@ -1,9 +1,9 @@
-import PropType from 'prop-types'
+import PropTypes from 'prop-types'
 // import user from '../user.json'
 // const data=user[0]
 
 
-export default function CreateMarkup(props){
+export default function CreateUserMarkup(props){
 
     const {avatar,username,tag,location,stats}=props;
     return (<div className="profile">
@@ -37,10 +37,10 @@ export default function CreateMarkup(props){
 }
 
 
-CreateMarkup.PropType={
-    avatar:PropType.string,
-    username:PropType.string,
-    tag:PropType.string,
-    location:PropType.string,
-    stats:PropType.object,
+CreateUserMarkup.propTypes={
+    avatar:PropTypes.string.isRequired,
+    username:PropTypes.string.isRequired,
+    tag:PropTypes.string.isRequired,
+    location:PropTypes.string.isRequired,
+    stats:PropTypes.number.isRequired,
 }

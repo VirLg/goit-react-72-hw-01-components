@@ -1,13 +1,13 @@
-// import user from '../user.json'
+import PropTypes from 'prop-types'
 
-import CreateMarkup from './CreateMarkup'
+import CreateUserMarkup from './CreateUserMarkup'
 
 export default function UserList({items}){
     return (<ul>
         {items.map(item=>(
             
         <li key={item.id}>
-            <CreateMarkup
+            <CreateUserMarkup
             avatar={item.avatar}
             username={item.username}
             tag={item.tag}
@@ -18,4 +18,10 @@ export default function UserList({items}){
         </li>
         ))}
     </ul>)
+}
+
+UserList.propTypes={
+items:PropTypes.arrayOf(PropTypes.shape({
+    id:PropTypes.number.isRequired,
+}))
 }
