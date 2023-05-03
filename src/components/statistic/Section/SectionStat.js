@@ -4,7 +4,7 @@ import css from './SectionStat.module.css'
 
 
 export default function SectionStat({children}){
-    console.log(children);
+  
     return(<div className={css.section__stat}>
       
             {children}

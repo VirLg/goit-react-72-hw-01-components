@@ -10,9 +10,9 @@ import SectionStat from './components/statistic/Section/SectionStat';
 import {DesckList} from './components/friendList/DesckList/DesckList';
 import friends from './components/friendList/friends.json';
 import {SectionFriend} from './components/friendList/SectionFriend/SectionFriend'
-
-
-console.log(SectionFriend);
+import {TableItem} from './components/transaction/TableItem/TableItem'
+import trancaction from './components/transaction/transactions.json'
+import {SectionTrancaction} from './components/transaction/SectionTrancaction/SctionTrancaction'
 
 export default function App() {
   return (
@@ -29,6 +29,10 @@ export default function App() {
     <SectionFriend>
       <DesckList className="" items={friends}/>
     </SectionFriend>
+
+    <SectionTrancaction>
+      <TableItem className="" items={trancaction}/>
+    </SectionTrancaction>
     
   </div>
   );

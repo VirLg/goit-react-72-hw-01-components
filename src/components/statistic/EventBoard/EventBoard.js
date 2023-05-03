@@ -3,7 +3,7 @@ import CreateItemMarkup from "../Item/Item"
 import css from './EventBoard.module.css'
 
 
-console.log(CreateItemMarkup);
+
 
 // console.log(data);
 export default function EventBoard({items}){
