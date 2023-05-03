@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 export const Item=function({type,amount,currency}){
     return(
-    <tr>
+    <>
         <th>{type}</th>
         <th>{amount}</th>
         <th>{currency}</th>
-    </tr>
+    </>
     )
 } 
 Item.propTypes={

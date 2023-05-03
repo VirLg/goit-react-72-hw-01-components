@@ -4,26 +4,45 @@ import items from '../transactions.json'
 
 
 export const TableItem=function(){
-    console.log(items);
-    TableRows(items)
+
+  return (
+    <table>
+        {TableHead(items)}
+        {TableBody(items)}
+    </table>
+    
+  )
+  
+  
+  
+ 
 }
 
-// function TableHead(items){
-  
+function TableHead(items){
+    const tableHead = (Object.keys(items[0]).slice(1));
+ return (<thead>{
+    tableHead.map(el=>
+    <th>
+        {el}
+    </th>)
+    }
+    
+    </thead>)
 
-// }
+}
 
- const TableRows = function({items}){
+ const TableBody = function(items){
 
-  return (<td>{items.map(item=>(
+  return (
+  <tbody>{items.map(item=>(
 
       <tr key={item.id}>
-        <Item 
+        <Item
         type={item.type}
         amount={item.amount}
         currency={item.currency}
          /> 
     </tr>))
-  }</td>)
+  }</tbody>)
   }
 

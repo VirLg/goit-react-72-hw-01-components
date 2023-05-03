@@ -11,12 +11,12 @@ import {DesckList} from './components/friendList/DesckList/DesckList';
 import friends from './components/friendList/friends.json';
 import {SectionFriend} from './components/friendList/SectionFriend/SectionFriend'
 import {TableItem} from './components/transaction/TableItem/TableItem'
-import trancaction from './components/transaction/transactions.json'
+import trancactions from './components/transaction/transactions.json'
 import {SectionTrancaction} from './components/transaction/SectionTrancaction/SctionTrancaction'
 
 export default function App() {
   return (
-  <div>
+  <>
     <Section>
       <List className = "user-block" items={user}/>
     </Section>
@@ -31,10 +31,10 @@ export default function App() {
     </SectionFriend>
 
     <SectionTrancaction>
-      <TableItem className="" items={trancaction}/>
+      <TableItem className="" items={trancactions}/>
     </SectionTrancaction>
     
-  </div>
+  </>
   );
 
 
