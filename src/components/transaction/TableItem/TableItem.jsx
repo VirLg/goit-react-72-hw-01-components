@@ -12,17 +12,13 @@ export const TableItem=function(){
     </table>
     
   )
-  
-  
-  
- 
 }
 
 function TableHead(items){
     const tableHead = (Object.keys(items[0]).slice(1));
  return (<thead>{
     tableHead.map(el=>
-    <th>
+    <th key={el}>
         {el}
     </th>)
     }
