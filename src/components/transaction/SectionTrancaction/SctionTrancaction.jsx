@@ -1,8 +1,6 @@
 export const SectionTrancaction=function({children}){
     return(<div>
         {children}
- 
-    
        </div>)
 }
 

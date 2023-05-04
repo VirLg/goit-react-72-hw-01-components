@@ -1,36 +1,39 @@
+import PropTypes from 'prop-types';
 import { Item } from "../Item/Item";
 import items from '../transactions.json'
-
+import {Table,TBody,THead} from './TableItem.styled'
 
 
 export const TableItem=function(){
 
   return (
-    <table>
+    <Table>
         {TableHead(items)}
         {TableBody(items)}
-    </table>
+    </Table>
     
   )
 }
 
 function TableHead(items){
-    const tableHead = (Object.keys(items[0]).slice(1));
- return (<thead>{
-    tableHead.map(el=>
-    <th key={el}>
-        {el}
-    </th>)
+    const tableHead = (Object.keys(items[0]).filter((el,idx)=>idx!==0));
+ return (<THead>
+  <tr>
+    {
+      tableHead.map(el=>
+      <th key={el}>
+          {el}
+      </th>)
     }
-    
-    </thead>)
+    </tr>
+    </THead>)
 
 }
 
  const TableBody = function(items){
 
   return (
-  <tbody>{items.map(item=>(
+  <TBody >{items.map(item=>(
 
       <tr key={item.id}>
         <Item
@@ -39,6 +42,11 @@ function TableHead(items){
         currency={item.currency}
          /> 
     </tr>))
-  }</tbody>)
+  }</TBody>)
   }
+
+  TableBody.propTypes={
+      id:PropTypes.string.isRequired,
+    }
+    
 
