@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types'
 import CreateItemMarkup from "../Item/Item"
-import css from './EventBoard.module.css'
 
+import {Item,EventCard} from './EventBoard.styled';
 
 
 
 // console.log(data);
-export default function EventBoard({items}){
+export const  EventBoard=function({items}){
 return (
     
-    <ul className={css.event__board}>
+    <EventCard >
         {items.map(item=>(
-        <li className={css.item} key={item.id}>
+        <Item  key={item.id}>
             <CreateItemMarkup
             label={item.label}
             percentage={item.percentage}
-            />
-        </li>))}
+            background-color="red" />
+        </Item>))}
 
-    </ul>
+    </EventCard>
 )}
 
 EventBoard.propTypes={
@@ -26,3 +26,7 @@ EventBoard.propTypes={
         id:PropTypes.string.isRequired,
     }))
     }
+
+  // const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+// backgroundColor={randomColor()}
