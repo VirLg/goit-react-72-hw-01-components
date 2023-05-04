@@ -3,10 +3,9 @@ import './App.css';
 import {UserList,Section} from './components/user/utils'
 import user from './components/user/user.json'
 
-
 import {EventBoard,BaseTitle,SectionStat} from './components/statistic/utils'
 import data from './components/statistic/data.json';
-// import SectionStat from './components/statistic/Section/SectionStat';
+
 
 import {DesckList} from './components/friendList/DesckList/DesckList';
 import friends from './components/friendList/friends.json';
