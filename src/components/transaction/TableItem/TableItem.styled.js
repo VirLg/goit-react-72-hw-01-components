@@ -6,6 +6,8 @@ export const Table=styled.table`
     width: 50%;
     border-collapse: collapse;
     border: 3px solid purple;
+    margin-left:auto;
+    margin-right:auto;
 `
 
 export const TBody=styled.tbody`
