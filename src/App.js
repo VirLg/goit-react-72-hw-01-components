@@ -1,24 +1,32 @@
-
 import './App.css';
-import List from './components/user/UserList';
-import user from './user.json'
-import Section from './components/Section'
+
+import {UserList,Section} from './components/user/utils'
+import user from './components/user/user.json'
+
+
+
+
 import Statistic from './components/statistic/EventBoard/EventBoard';
 import BaseTitle from './components/statistic/BaseTitle/BaseTitle';
 import data from './components/statistic/data.json';
 import SectionStat from './components/statistic/Section/SectionStat';
+
 import {DesckList} from './components/friendList/DesckList/DesckList';
 import friends from './components/friendList/friends.json';
 import {SectionFriend} from './components/friendList/SectionFriend/SectionFriend'
+
 import {TableItem} from './components/transaction/TableItem/TableItem'
 import trancactions from './components/transaction/transactions.json'
 import {SectionTrancaction} from './components/transaction/SectionTrancaction/SctionTrancaction'
+
+
+
 
 export default function App() {
   return (
   <>
     <Section>
-      <List className = "user-block" items={user}/>
+      <UserList className = "user-block" items={user}/>
     </Section>
     
     <SectionStat className="statistic">

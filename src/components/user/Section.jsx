@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
-// import PageTitle from './statistic/BaseTitle/BaseTitle'
 
-
-export default function Section({title,children}){
+export const  Section = function({title,children}){
     
     return(<div>
             {children}
@@ -10,6 +8,7 @@ export default function Section({title,children}){
         
            </div>)
 }
+
 Section.propTypes={
 title:PropTypes.string,
 children:PropTypes.node,

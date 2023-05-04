@@ -1,0 +1,7 @@
+import styled from "@emotion/styled"; 
+
+export const Container = styled.div`
+width:400px;
+height:600px;
+background-color:red;
+`
